@@ -6,7 +6,7 @@ var mongo = require('mongodb');
 
 var wastepaper = require('./routes/wastepaper');
 
-
+app.use("/app", express.static("./app"));
 app.get("/wastepaper/:id", wastepaper.getWaste);
 app.post("/wastepaper", wastepaper.addWaste);
 
