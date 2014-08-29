@@ -5,7 +5,6 @@ var app = express();
 var wastepaper = require('./routes/wastepaper');
 
 app.use("/app", express.static("./app"));
-app.use("/app/index.html", express.static("./app/index.html"));
 app.get("/wastepaper/lookup/:id", wastepaper.getWaste);
 app.post("/wastepaper", wastepaper.addWaste);
 
