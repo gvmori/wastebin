@@ -10,5 +10,6 @@ angular.module('wastebin', [
 ])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/write', {templateUrl: 'partials/write.html', controller: 'TextAreaController'});
+    $routeProvider.when('/read', {templateUrl: 'partials/read.html', controller: 'TextAreaController'});
     $routeProvider.otherwise({redirectTo: '/write'});
   }]);
